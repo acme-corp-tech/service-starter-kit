@@ -4,3 +4,5 @@
 /bench-*.txt
 /vendor
 /bin
+/.env
+/resources/static/openapi.json
