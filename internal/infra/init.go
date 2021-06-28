@@ -29,7 +29,7 @@ func NewServiceLocator(cfg service.Config) (loc *service.Locator, err error) {
 		return nil, err
 	}
 
-	if err = jaeger.Setup(cfg.Jaeger, cfg.ServiceName, l.BaseLocator); err != nil {
+	if err = jaeger.Setup(cfg.Jaeger, l.BaseLocator); err != nil {
 		return nil, err
 	}
 
