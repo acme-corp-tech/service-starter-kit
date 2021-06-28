@@ -7,7 +7,7 @@ import (
 )
 
 // Name is the name of this application or service.
-const Name = "brick-template"
+const Name = "brick-starter-kit"
 
 // Config defines application configuration.
 type Config struct {

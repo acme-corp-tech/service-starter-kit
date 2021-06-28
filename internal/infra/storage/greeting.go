@@ -5,7 +5,7 @@ import (
 	"errors"
 	"time"
 
-	"github.com/bool64/brick-template/internal/domain/greeting"
+	"github.com/bool64/brick-starter-kit/internal/domain/greeting"
 	"github.com/bool64/ctxd"
 	"github.com/bool64/sqluct"
 	"github.com/go-sql-driver/mysql"

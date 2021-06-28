@@ -3,10 +3,10 @@ package main_test
 import (
 	"testing"
 
-	"github.com/bool64/brick-template/internal/infra"
-	"github.com/bool64/brick-template/internal/infra/nethttp"
-	"github.com/bool64/brick-template/internal/infra/service"
-	"github.com/bool64/brick-template/internal/infra/storage"
+	"github.com/bool64/brick-starter-kit/internal/infra"
+	"github.com/bool64/brick-starter-kit/internal/infra/nethttp"
+	"github.com/bool64/brick-starter-kit/internal/infra/service"
+	"github.com/bool64/brick-starter-kit/internal/infra/storage"
 	"github.com/bool64/brick/config"
 	"github.com/bool64/dbdog"
 	"github.com/bool64/httpdog"

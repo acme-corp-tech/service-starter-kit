@@ -9,10 +9,10 @@ gh_repo=${gh_repo%".git"}
 copyright="$(date +%Y) $(git config user.name)"
 project_name=$(basename $gh_repo)
 
-echo "## Replacing all brick-template references by $project_name"
+echo "## Replacing all brick-starter-kit references by $project_name"
 find . -type f -not -name run_me.sh -print0 | xargs -0 perl -i -pe "s|2021 bool64|$copyright|g"
-find . -type f -not -name run_me.sh -print0 | xargs -0 perl -i -pe "s|bool64/brick-template|$gh_repo|g"
-find . -type f -not -name run_me.sh -print0 | xargs -0 perl -i -pe "s|brick-template|$project_name|g"
+find . -type f -not -name run_me.sh -print0 | xargs -0 perl -i -pe "s|bool64/brick-starter-kit|$gh_repo|g"
+find . -type f -not -name run_me.sh -print0 | xargs -0 perl -i -pe "s|brick-starter-kit|$project_name|g"
 
 echo "## Removing this script"
 rm ./run_me.sh

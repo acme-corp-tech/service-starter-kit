@@ -1,4 +1,4 @@
-module github.com/bool64/brick-template
+module github.com/bool64/brick-starter-kit
 
 go 1.16
 

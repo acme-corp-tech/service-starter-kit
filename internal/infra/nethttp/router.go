@@ -5,9 +5,9 @@ import (
 	"net/http"
 
 	"github.com/bool64/brick"
-	"github.com/bool64/brick-template/internal/infra/nethttp/ui"
-	"github.com/bool64/brick-template/internal/infra/service"
-	"github.com/bool64/brick-template/internal/usecase"
+	"github.com/bool64/brick-starter-kit/internal/infra/nethttp/ui"
+	"github.com/bool64/brick-starter-kit/internal/infra/service"
+	"github.com/bool64/brick-starter-kit/internal/usecase"
 	"github.com/swaggest/rest/nethttp"
 )
 
