@@ -23,7 +23,7 @@ jobs:
         if: ${{ steps.changed.outputs.diagrams }}
         uses: benc-uk/workflow-dispatch@v1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.ORG_GITHUB_TOKEN }}
           repo: acme-corp-tech/architecture
           ref: main
           workflow: "diagrams"

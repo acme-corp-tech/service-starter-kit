@@ -49,7 +49,7 @@ jobs:
           ref: ${{ github.event.pull_request.base.sha }}
           path: __base
       - name: Docker Compose
-        run: (test -f ./dev/docker-compose.integration-test.yml && docker-compose -f ./dev/docker-compose.integration-test.yml up -d && docker ps && docker-compose -f ./dev/docker-compose.integration-test.yml logs) || echo "::warning ::Missing ./dev/docker-compose.integration-test.yml file"
+        run: (test -f ./docker-compose.yml && docker-compose -f ./docker-compose.yml up -d && docker ps && docker-compose -f ./docker-compose.yml logs) || echo "::warning ::Missing ./docker-compose.yml file"
       - name: Run test for base code
         if: matrix.go-version == '1.17.x' && env.RUN_BASE_COVERAGE == 'on' && steps.benchmark-base.outputs.cache-hit != 'true' && github.event.pull_request.base.sha != ''
         run: |

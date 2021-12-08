@@ -30,3 +30,5 @@ rm ./run_me.sh
 echo "## Please check the @TODO's:"
 git grep TODO | grep -v run_me.sh
 
+git add .
+
