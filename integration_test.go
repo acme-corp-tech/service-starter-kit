@@ -1,11 +1,11 @@
 package main_test
 
 import (
-	"github.com/acme-corp-tech/brick/test"
 	"net/http"
 	"testing"
 
 	"github.com/acme-corp-tech/brick"
+	"github.com/acme-corp-tech/brick/test"
 	"github.com/acme-corp-tech/service-starter-kit/internal/infra"
 	"github.com/acme-corp-tech/service-starter-kit/internal/infra/nethttp"
 	"github.com/acme-corp-tech/service-starter-kit/internal/infra/service"
