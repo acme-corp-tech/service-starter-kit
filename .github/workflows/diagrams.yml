@@ -1,0 +1,33 @@
+name: diagrams
+on:
+  push:
+    branches:
+      - master
+      - main
+env:
+  GO111MODULE: "on"
+jobs:
+  diagrams:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Check changed files
+        id: changed
+        run: |
+          DIAGRAMS=$(git diff --name-only ${{ github.event.before }}..${{ github.event.after }} | grep .puml || true)
+          echo "::set-output name=diagrams::$DIAGRAMS"
+      - name: Trigger Diagram Rendering
+        if: ${{ steps.changed.outputs.diagrams }}
+        uses: benc-uk/workflow-dispatch@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repo: acme-corp-tech/architecture
+          ref: main
+          workflow: "diagrams"
+
+
+
+

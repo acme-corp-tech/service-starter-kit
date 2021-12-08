@@ -3,13 +3,13 @@ package infra
 import (
 	"context"
 
-	"github.com/bool64/brick"
-	"github.com/bool64/brick-starter-kit/internal/domain/greeting"
-	"github.com/bool64/brick-starter-kit/internal/infra/schema"
-	"github.com/bool64/brick-starter-kit/internal/infra/service"
-	"github.com/bool64/brick-starter-kit/internal/infra/storage"
-	"github.com/bool64/brick/database"
-	"github.com/bool64/brick/jaeger"
+	"github.com/acme-corp-tech/brick"
+	"github.com/acme-corp-tech/brick/database"
+	"github.com/acme-corp-tech/brick/jaeger"
+	"github.com/acme-corp-tech/service-starter-kit/internal/domain/greeting"
+	"github.com/acme-corp-tech/service-starter-kit/internal/infra/schema"
+	"github.com/acme-corp-tech/service-starter-kit/internal/infra/service"
+	"github.com/acme-corp-tech/service-starter-kit/internal/infra/storage"
 	"github.com/go-sql-driver/mysql"
 	"github.com/swaggest/rest/response/gzip"
 )

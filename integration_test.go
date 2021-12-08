@@ -1,14 +1,15 @@
 package main_test
 
 import (
+	"github.com/acme-corp-tech/brick/test"
 	"net/http"
 	"testing"
 
-	"github.com/bool64/brick"
-	"github.com/bool64/brick-starter-kit/internal/infra"
-	"github.com/bool64/brick-starter-kit/internal/infra/nethttp"
-	"github.com/bool64/brick-starter-kit/internal/infra/service"
-	"github.com/bool64/brick-starter-kit/internal/infra/storage"
+	"github.com/acme-corp-tech/brick"
+	"github.com/acme-corp-tech/service-starter-kit/internal/infra"
+	"github.com/acme-corp-tech/service-starter-kit/internal/infra/nethttp"
+	"github.com/acme-corp-tech/service-starter-kit/internal/infra/service"
+	"github.com/acme-corp-tech/service-starter-kit/internal/infra/storage"
 	"github.com/bool64/dbdog"
 	"github.com/stretchr/testify/require"
 )
@@ -16,7 +17,7 @@ import (
 func TestFeatures(t *testing.T) {
 	var cfg service.Config
 
-	brick.RunTests(t, "", &cfg, func(tc *brick.TestContext) (*brick.BaseLocator, http.Handler) {
+	test.RunFeatures(t, "", &cfg, func(tc *test.Context) (*brick.BaseLocator, http.Handler) {
 		cfg.ServiceName = service.Name
 
 		sl, err := infra.NewServiceLocator(cfg)

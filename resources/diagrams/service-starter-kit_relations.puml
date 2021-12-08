@@ -1,0 +1,6 @@
+@startuml "service_starter_kit_relations"
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+Rel(service_starter_kit, service_starter_kit_db, "Stores something")
+
+@enduml

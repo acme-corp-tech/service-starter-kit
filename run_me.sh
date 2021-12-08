@@ -8,11 +8,20 @@ gh_repo=${gh_repo#"https://github.com/"}
 gh_repo=${gh_repo%".git"}
 copyright="$(date +%Y) $(git config user.name)"
 project_name=$(basename $gh_repo)
+project_cap=$(echo $project_name | tr a-z A-Z | tr - _)
+project_words=$(echo $project_name | tr - ' ' | awk '{for(i=1;i<=NF;i++){ $i=toupper(substr($i,1,1)) substr($i,2) }}1')
 
 echo "## Replacing all brick-starter-kit references by $project_name"
 find . -type f -not -name run_me.sh -print0 | xargs -0 perl -i -pe "s|2021 bool64|$copyright|g"
-find . -type f -not -name run_me.sh -print0 | xargs -0 perl -i -pe "s|bool64/brick-starter-kit|$gh_repo|g"
-find . -type f -not -name run_me.sh -print0 | xargs -0 perl -i -pe "s|brick-starter-kit|$project_name|g"
+find . -type f -not -name run_me.sh -print0 | xargs -0 perl -i -pe "s|acme-corp-tech/service-starter-kit|$gh_repo|g"
+find . -type f -not -name run_me.sh -print0 | xargs -0 perl -i -pe "s|service-starter-kit|$project_name|g"
+find . -type f -not -name run_me.sh -print0 | xargs -0 perl -i -pe "s|SERVICE_STARTER_KIT|$project_cap|g"
+find . -type f -not -name run_me.sh -print0 | xargs -0 perl -i -pe "s|Service Starter Kit|$project_words|g"
+
+mv ./resources/diagrams/service-starter-kit_components.puml ./resources/diagrams/{$project_name}_components.puml
+mv ./resources/diagrams/service-starter-kit_relations.puml ./resources/diagrams/{$project_name}_relations.puml
+mv ./resources/diagrams/service-starter-kit_system.puml ./resources/diagrams/{$project_name}_system.puml
+git add ./resources/diagrams
 
 echo "## Removing this script"
 rm ./run_me.sh
