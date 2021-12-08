@@ -49,7 +49,7 @@ jobs:
           ref: ${{ github.event.pull_request.base.sha }}
           path: __base
       - name: Docker Compose
-        run: (test -f ./docker-compose.yml && docker-compose -f ./docker-compose.yml up -d && docker ps && docker-compose -f ./docker-compose.yml logs) || echo "::warning ::Missing ./docker-compose.yml file"
+        run: (test -f ./dev/docker-compose.integration-test.yml && docker-compose -f ./dev/docker-compose.integration-test.yml up -d && docker ps && docker-compose -f ./dev/docker-compose.integration-test.yml logs) || echo "::warning ::Missing ./dev/docker-compose.integration-test.yml file"
       - name: Run test for base code
         if: matrix.go-version == '1.17.x' && env.RUN_BASE_COVERAGE == 'on' && steps.benchmark-base.outputs.cache-hit != 'true' && github.event.pull_request.base.sha != ''
         run: |
@@ -61,16 +61,19 @@ jobs:
           make test-integration
           go tool cover -func=./integration.coverprofile | sed -e 's/.go:[0-9]*:\t/.go\t/g' | sed -e 's/\t\t*/\t/g'  > integration.txt
           OUTPUT=$(test -e integration-base.txt && (diff integration-base.txt integration.txt || exit 0) || cat integration.txt)
+          echo "${OUTPUT}"
           OUTPUT="${OUTPUT//'%'/'%25'}"
           OUTPUT="${OUTPUT//$'\n'/'%0A'}"
           OUTPUT="${OUTPUT//$'\r'/'%0D'}"
           TOTAL=$(grep 'total:' integration.txt)
+          echo "${TOTAL}"
           echo "::set-output name=diff::$OUTPUT"
           echo "::set-output name=total::$TOTAL"
       - name: Store base coverage
         if: ${{ github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main' }}
         run: cp integration.txt integration-base.txt
       - name: Comment Test Coverage
+        continue-on-error: true
         if: matrix.go-version == '1.17.x'
         uses: marocchino/sticky-pull-request-comment@v2
         with:
