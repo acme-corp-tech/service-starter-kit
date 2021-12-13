@@ -3,10 +3,10 @@ module github.com/acme-corp-tech/service-starter-kit
 go 1.17
 
 require (
-	github.com/acme-corp-tech/brick v0.0.8
+	github.com/acme-corp-tech/brick v0.0.9
 	github.com/bool64/ctxd v1.0.0
 	github.com/bool64/dbdog v0.4.2
-	github.com/bool64/dev v0.2.2
+	github.com/bool64/dev v0.2.3
 	github.com/bool64/httptestbench v0.1.1
 	github.com/bool64/sqluct v0.1.9
 	github.com/bool64/stats v0.2.1
