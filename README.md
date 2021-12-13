@@ -15,3 +15,5 @@ service-starter-kit
 
 Create a new repository from this template, check out it and run `./run_me.sh` to replace template name with name of
 your repository.
+
+[![Service Starter Kit System](https://raw.githubusercontent.com/wiki/acme-corp-tech/architecture/service-starter-kit_system.svg)](https://github.com/acme-corp-tech/architecture/wiki/Acme-Services#service-starter-kit-service)

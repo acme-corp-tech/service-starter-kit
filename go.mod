@@ -3,10 +3,10 @@ module github.com/acme-corp-tech/service-starter-kit
 go 1.17
 
 require (
-	github.com/acme-corp-tech/brick v0.0.7
+	github.com/acme-corp-tech/brick v0.0.9
 	github.com/bool64/ctxd v1.0.0
 	github.com/bool64/dbdog v0.4.2
-	github.com/bool64/dev v0.1.44
+	github.com/bool64/dev v0.2.3
 	github.com/bool64/httptestbench v0.1.1
 	github.com/bool64/sqluct v0.1.9
 	github.com/bool64/stats v0.2.1
@@ -83,12 +83,12 @@ require (
 	go.uber.org/atomic v1.9.0 // indirect
 	go.uber.org/multierr v1.7.0 // indirect
 	go.uber.org/zap v1.19.1 // indirect
-	golang.org/x/net v0.0.0-20211207213349-853792941377 // indirect
+	golang.org/x/net v0.0.0-20211209124913-491a49abca63 // indirect
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c // indirect
-	golang.org/x/sys v0.0.0-20211205182925-97ca703d548d // indirect
+	golang.org/x/sys v0.0.0-20211210111614-af8b64212486 // indirect
 	golang.org/x/text v0.3.7 // indirect
 	google.golang.org/api v0.30.0 // indirect
-	google.golang.org/genproto v0.0.0-20211207154714-918901c715cf // indirect
+	google.golang.org/genproto v0.0.0-20211208223120-3a66f561d7aa // indirect
 	google.golang.org/grpc v1.42.0 // indirect
 	google.golang.org/protobuf v1.27.1 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
