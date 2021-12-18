@@ -21,6 +21,7 @@ func Benchmark_hello(b *testing.B) {
 	log.SetOutput(ioutil.Discard)
 
 	cfg := service.Config{}
+	cfg.Initialized = true
 	cfg.Log.Output = ioutil.Discard
 	cfg.ShutdownTimeout = time.Second
 	l, err := infra.NewServiceLocator(cfg)

@@ -9,6 +9,7 @@ import (
 	"github.com/bool64/brick-starter-kit/internal/infra/nethttp"
 	"github.com/bool64/brick-starter-kit/internal/infra/service"
 	"github.com/bool64/brick-starter-kit/internal/infra/storage"
+	"github.com/bool64/brick/test"
 	"github.com/bool64/dbdog"
 	"github.com/stretchr/testify/require"
 )
@@ -16,7 +17,7 @@ import (
 func TestFeatures(t *testing.T) {
 	var cfg service.Config
 
-	brick.RunTests(t, "", &cfg, func(tc *brick.TestContext) (*brick.BaseLocator, http.Handler) {
+	test.RunFeatures(t, "", &cfg, func(tc *test.Context) (*brick.BaseLocator, http.Handler) {
 		cfg.ServiceName = service.Name
 
 		sl, err := infra.NewServiceLocator(cfg)
