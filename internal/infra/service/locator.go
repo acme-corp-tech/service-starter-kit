@@ -1,7 +1,7 @@
 package service
 
 import (
-	"github.com/acme-corp-tech/brick"
+	"github.com/bool64/brick"
 )
 
 // Locator defines application resources.

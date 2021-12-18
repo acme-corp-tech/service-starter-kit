@@ -4,10 +4,10 @@ package nethttp
 import (
 	"net/http"
 
-	"github.com/acme-corp-tech/brick"
-	"github.com/acme-corp-tech/service-starter-kit/internal/infra/nethttp/ui"
-	"github.com/acme-corp-tech/service-starter-kit/internal/infra/service"
-	"github.com/acme-corp-tech/service-starter-kit/internal/usecase"
+	"github.com/bool64/brick"
+	"github.com/bool64/brick-starter-kit/internal/infra/nethttp/ui"
+	"github.com/bool64/brick-starter-kit/internal/infra/service"
+	"github.com/bool64/brick-starter-kit/internal/usecase"
 	"github.com/swaggest/rest/nethttp"
 )
 

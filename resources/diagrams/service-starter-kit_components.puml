@@ -1,9 +1,0 @@
-@startuml "service_starter_kit_components"
-!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
-
-System_Boundary(service_starter_kit_system, "[[https://github.com/acme-corp-tech/architecture/wiki/service_starter_kit_system.svg Service Starter Kit]]") {
-    Container(service_starter_kit, "Service Starter Kit", "Go", "Change Me", $sprite="go")
-    ContainerDb(service_starter_kit_db, "Service Starter Kit Database", "MySQL", "", $sprite="mysql")
-}
-
-@enduml

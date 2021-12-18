@@ -1,7 +1,0 @@
-@startuml "service_starter_kit_system"
-!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
-
-!include service_starter_kit_components.puml
-!include service_starter_kit_relations.puml
-
-@enduml

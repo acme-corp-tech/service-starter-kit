@@ -3,7 +3,7 @@ package usecase
 import (
 	"context"
 
-	"github.com/acme-corp-tech/service-starter-kit/internal/domain/greeting"
+	"github.com/bool64/brick-starter-kit/internal/domain/greeting"
 	"github.com/bool64/ctxd"
 	"github.com/bool64/stats"
 	"github.com/swaggest/usecase"

@@ -1,10 +1,10 @@
 FROM alpine
 
 #HEALTHCHECK --interval=20s --timeout=3s --start-period=5s --retries=3 \
-#  CMD /bin/service-starter-kit -health
+#  CMD /bin/brick-starter-kit -health
 
-COPY ./bin/service-starter-kit /bin/service-starter-kit
+COPY ./bin/brick-starter-kit /bin/brick-starter-kit
 
 EXPOSE 80
 
-ENTRYPOINT [ "/bin/service-starter-kit" ]
+ENTRYPOINT [ "/bin/brick-starter-kit" ]
