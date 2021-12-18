@@ -1,13 +1,13 @@
 package service
 
 import (
-	"github.com/bool64/brick"
-	"github.com/bool64/brick/database"
-	"github.com/bool64/brick/jaeger"
+	"github.com/acme-corp-tech/brick"
+	"github.com/acme-corp-tech/brick/database"
+	"github.com/acme-corp-tech/brick/jaeger"
 )
 
 // Name is the name of this application or service.
-const Name = "brick-starter-kit"
+const Name = "service-starter-kit"
 
 // Config defines application configuration.
 type Config struct {

@@ -1,9 +1,0 @@
-@startuml "brick_starter_kit_components"
-!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
-
-System_Boundary(brick_starter_kit_system, "[[https://github.com/acme-corp-tech/architecture/wiki/brick_starter_kit_system.svg Brick Starter Kit]]") {
-    Container(brick_starter_kit, "Brick Starter Kit", "Go", "Change Me", $sprite="go")
-    ContainerDb(brick_starter_kit_db, "Brick Starter Kit Database", "MySQL", "", $sprite="mysql")
-}
-
-@enduml

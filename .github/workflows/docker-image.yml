@@ -43,8 +43,8 @@ jobs:
           lichen -c licenses.yml ./bin/*
       - name: Build docker image
         run: |
-          docker build --progress plain -t ghcr.io/bool64/brick-starter-kit:${{ steps.build.outputs.version }} -t ghcr.io/bool64/brick-starter-kit:latest .
-          docker run --rm ghcr.io/bool64/brick-starter-kit:${{ steps.build.outputs.version }} -version
+          docker build --progress plain -t ghcr.io/acme-corp-tech/service-starter-kit:${{ steps.build.outputs.version }} -t ghcr.io/acme-corp-tech/service-starter-kit:latest .
+          docker run --rm ghcr.io/acme-corp-tech/service-starter-kit:${{ steps.build.outputs.version }} -version
       - name: Login to Github Packages
         uses: docker/login-action@v1
         with:
@@ -53,5 +53,5 @@ jobs:
           password: ${{ secrets.ORG_GITHUB_TOKEN }}
       - name: Push image to Github Packages
         run: |
-          docker push ghcr.io/bool64/brick-starter-kit:${{ steps.build.outputs.version }}
-          [ -z "${{ github.head_ref }}" ] && docker push ghcr.io/bool64/brick-starter-kit/service:latest || echo "Not pushing latest image for PR"
+          docker push ghcr.io/acme-corp-tech/service-starter-kit:${{ steps.build.outputs.version }}
+          [ -z "${{ github.head_ref }}" ] && docker push ghcr.io/acme-corp-tech/service-starter-kit/service:latest || echo "Not pushing latest image for PR"

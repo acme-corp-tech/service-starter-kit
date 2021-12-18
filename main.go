@@ -4,10 +4,10 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/bool64/brick"
-	"github.com/bool64/brick-starter-kit/internal/infra"
-	"github.com/bool64/brick-starter-kit/internal/infra/nethttp"
-	"github.com/bool64/brick-starter-kit/internal/infra/service"
+	"github.com/acme-corp-tech/brick"
+	"github.com/acme-corp-tech/service-starter-kit/internal/infra"
+	"github.com/acme-corp-tech/service-starter-kit/internal/infra/nethttp"
+	"github.com/acme-corp-tech/service-starter-kit/internal/infra/service"
 )
 
 func main() {
