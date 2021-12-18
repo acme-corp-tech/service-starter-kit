@@ -10,7 +10,6 @@ import (
 	"github.com/acme-corp-tech/service-starter-kit/internal/infra/nethttp"
 	"github.com/acme-corp-tech/service-starter-kit/internal/infra/service"
 	"github.com/acme-corp-tech/service-starter-kit/internal/infra/storage"
-	"github.com/acme-corp-tech/brick/test"
 	"github.com/bool64/dbdog"
 	"github.com/stretchr/testify/require"
 )
