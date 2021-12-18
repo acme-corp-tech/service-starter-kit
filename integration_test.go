@@ -10,6 +10,7 @@ import (
 	"github.com/bool64/brick-starter-kit/internal/infra/nethttp"
 	"github.com/bool64/brick-starter-kit/internal/infra/service"
 	"github.com/bool64/brick-starter-kit/internal/infra/storage"
+	"github.com/bool64/brick/test"
 	"github.com/bool64/dbdog"
 	"github.com/stretchr/testify/require"
 )
